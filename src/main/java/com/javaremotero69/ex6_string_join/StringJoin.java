@@ -27,7 +27,25 @@ public class StringJoin {
         List<Integer> numbers = new ArrayList<>(Arrays.asList(3, 44, 2, 5));
         System.out.println("Metoda prin for: " + methodFor(numbers));
         System.out.println("Metoda prin for: " + methodFor2(numbers));
+        System.out.println("Metoda prin for: " + methodForUsingSB(numbers));
         System.out.println("Metoda prin stream: " + methodStreams(numbers));
+    }
+
+    // Convert the list to "e" or "o" prefixed form based on odd/even
+    private static String methodForUsingSB(List<Integer> myList) {
+        StringBuilder result = new StringBuilder();  // StringBuilder for efficient concatenation
+
+        for (Integer item : myList) {
+            String formattedValue = convertIntToStrForm(item);  // Get the "o"/"e" prefixed value
+            result.append(formattedValue).append(",");  // Append the result and a comma
+        }
+
+        // Remove the last comma if the result is not empty
+        if (!result.isEmpty()) {
+            result.setLength(result.length() - 1);
+        }
+
+        return result.toString();  // Convert StringBuilder to String
     }
 
     private static String methodFor2(List<Integer> numbers) {

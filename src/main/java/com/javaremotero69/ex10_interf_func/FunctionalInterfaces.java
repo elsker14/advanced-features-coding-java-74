@@ -79,7 +79,7 @@ public class FunctionalInterfaces {
         // - echivalentul lui Supplier la nivel de metoda este de a se comporta ca un GETTER
         // - o diferenta e modul de initializare, static si constant, fata de dinamic
         // - o alta diferenta e gradul de abstractizare, in situatia utilizarii lui Supplier,
-        // putem golosi get in orice invocare externa a obiectului pentru a avea acces la valoare,
+        // putem folosi get in orice invocare externa a obiectului pentru a avea acces la valoare,
         // fara posibilitatea de a o altera
         String message = "Hello from primitive! I not am hiding!";
         System.out.println(message);
